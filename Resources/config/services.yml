@@ -2,9 +2,11 @@ services:
 
     wh.systempay:
         class: WH\SystemPayBundle\Service\SystemPay
+        public: true
         arguments: ['@doctrine.orm.entity_manager', '@service_container']
 
     wh.systempay.twig_extension:
+        public: true
         class: WH\SystemPayBundle\Twig\TwigExtension
         tags:
             - { name: twig.extension }
