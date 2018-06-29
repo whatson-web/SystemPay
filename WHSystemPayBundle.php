@@ -4,6 +4,6 @@ namespace WH\SystemPayBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class WHSystempayBundle extends Bundle
+class WHSystemPayBundle extends Bundle
 {
 }
