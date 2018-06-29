@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('tlconseil_systempay');
+        $rootNode = $treeBuilder->root('wh_systempay');
 
         $rootNode
             ->children()
