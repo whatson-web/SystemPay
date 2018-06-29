@@ -1,1 +1,3 @@
-Hello {{ name }}!
+<form action="{{ paymentUrl }}" method="POST" id="systempay-form">
+    {{ systempayForm(fields) | raw }}
+</form>
