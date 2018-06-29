@@ -158,7 +158,7 @@ class SystemPay
     public function findTransaction(Request $request)
     {
         $query = $request->request->all();
-        $this->transaction = $this->entityManager->getRepository('TlconseilSystempayBundle:Transaction')->find($query['vads_trans_id']);
+        $this->transaction = $this->entityManager->getRepository('WHSystemPayBundle:Transaction')->find($query['vads_trans_id']);
         
         return $this->transaction;
     }
