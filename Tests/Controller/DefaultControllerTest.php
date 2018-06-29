@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\SystempayBundle\Tests\Controller;
+namespace WH\SystemPayBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

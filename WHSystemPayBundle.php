@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\SystempayBundle;
+namespace WH\SystemPayBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

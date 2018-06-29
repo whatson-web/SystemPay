@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\SystempayBundle\Entity;
+namespace WH\SystemPayBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

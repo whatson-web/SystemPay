@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\SystempayBundle\Twig;
+namespace WH\SystemPayBundle\Twig;
 
 use Twig_Extension;
 use Twig_SimpleFunction;

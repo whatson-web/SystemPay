@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\SystempayBundle\Service;
+namespace WH\SystemPayBundle\Service;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\DependencyInjection\Container;
