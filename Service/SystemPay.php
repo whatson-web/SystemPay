@@ -139,7 +139,7 @@ class SystemPay
             unset ($query['signature']);
             if ($signature == $this->getSignature($query))
             {
-                $transaction = $this->findTransaction(request);
+                $transaction = $this->findTransaction($request);
                 $transaction->setStatus($query['vads_trans_status']);
                 if ($query['vads_trans_status'] == "AUTHORISED")
                     $transaction->setPaid(true);
@@ -157,8 +157,8 @@ class SystemPay
      */
     public function findTransaction(Request $request)
     {
-        $query = $request->request->all();
-        $this->transaction = $this->entityManager->getRepository('WHSystemPayBundle:Transaction')->find($query['vads_trans_id']);
+        $id = $request->request->get('vads_trans_id');
+        $this->transaction = $this->entityManager->getRepository('WHSystemPayBundle:Transaction')->find($id);
         
         return $this->transaction;
     }
