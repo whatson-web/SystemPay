@@ -1,0 +1,10 @@
+services:
+
+    wh.systempay:
+        class: WH\SystempayBundle\Service\SystemPay
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+
+    wh.systempay.twig_extension:
+        class: WH\SystempayBundle\Twig\TwigExtension
+        tags:
+            - { name: twig.extension }
