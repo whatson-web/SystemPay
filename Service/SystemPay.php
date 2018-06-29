@@ -5,7 +5,7 @@ namespace WH\SystemPayBundle\Service;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpFoundation\Request;
-use Tlconseil\SystempayBundle\Entity\Transaction;
+use WH\SystemPayBundle\Entity\Transaction;
 
 /**
  * Class SystemPay
