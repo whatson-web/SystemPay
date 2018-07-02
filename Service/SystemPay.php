@@ -22,15 +22,12 @@ class SystemPay
      * @var array
      */
     private $mandatoryFields = array(
-        'action_mode' => null,
-        'ctx_mode' => null,
-        'page_action' => null,
-        'payment_config' => null,
         'site_id' => null,
+        'ctx_mode' => null,
+        'action_mode' => null,
+        'page_action' => null,
         'version' => null,
-        'redirect_success_message' => null,
-        'redirect_error_message' => null,
-        'url_return' => null,
+        'payment_config' => null,
     );
 
     /**
@@ -151,7 +148,7 @@ class SystemPay
         }
         return false;
     }
-    
+
     /**
      * @return Transaction
      */
@@ -159,7 +156,7 @@ class SystemPay
     {
         $id = $request->request->get('vads_trans_id');
         $this->transaction = $this->entityManager->getRepository('WHSystemPayBundle:Transaction')->find($id);
-        
+
         return $this->transaction;
     }
 
@@ -197,12 +194,18 @@ class SystemPay
      */
     private function getSignature($fields = null)
     {
-        if (!$fields)
+        if (!$fields) {
             $fields = $this->mandatoryFields = $this->setPrefixToFields($this->mandatoryFields);
+        }
+
         ksort($fields);
+
         $contenu_signature = "";
-        foreach ($fields as $field => $value)
-                $contenu_signature .= $value."+";
+
+        foreach ($fields as $field => $value) {
+            $contenu_signature .= $value."+";
+        }
+
         $contenu_signature .= $this->key;
         $signature = sha1($contenu_signature);
         return $signature;
